@@ -1,0 +1,22 @@
+{
+  "name": "exos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aureliedev/exos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aureliedev/exos/issues"
+  },
+  "homepage": "https://github.com/aureliedev/exos#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
