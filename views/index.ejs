@@ -2,12 +2,28 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Accueil</title>
 </head>
 
 <body>
     <h1>Bienvenue <%= nom %> !</h1>
+    <nav>
+        <ul>
+            <% if (role==='admin' ) { %>
+                <li>
+                    <p>Tu as accès à des fonctionnalités avancées car tu as le rôle : <strong>
+                            <%= role %>
+                        </strong></p><a href="/admin">🛡️ Espace réservé à l’administrateur</a>
+                </li>
+                <% } %>
+                    <li><a href="/logout">Se déconnecter</a></li>
+        </ul>
+    </nav>
+    <% if (role==='admin' ) { %>
+        <% } else { %>
+            <p>👤 Espace utilisateur classique</p>
+            <% } %>
 </body>
 
 </html>

@@ -2,22 +2,30 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Inscription</title>
 </head>
 
 <body>
     <h1>Inscription</h1>
-    <form action="/signup" method="POST">
-        <label for="username">Nom d'utilisateur :</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">S'inscrire</button>
-    </form>
-    <p>Déjà inscrit ? <a href="/signin">Connexion</a></p>
+
+    <% if (message) { %>
+        <p style="color: red;">
+            <%= message %>
+        </p>
+        <% } %>
+
+            <form method="POST" action="/signup">
+                <label>Nom d'utilisateur :</label>
+                <input type="text" name="username" required />
+                <br />
+                <label>Mot de passe :</label>
+                <input type="password" name="password" required />
+                <br />
+                <button type="submit">S’inscrire</button>
+            </form>
+
+            <p>Déjà un compte ? <a href="/signin">Se connecter</a></p>
 </body>
 
 </html>
